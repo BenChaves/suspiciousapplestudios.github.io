@@ -1,7 +1,91 @@
+html, body /*css reset code */
+{
+    margin: 0;
+    padding: 0;
+}
+
 canvas{
   position: fixed;
   top: 0;
   left: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp {
+  animation: 1.5s fadeInUp;
+}
+
+.fadeInLeft {
+  animation: 1.5s fadeInLeft;
+}
+
+.fadeInRight {
+  animation: 1.5s fadeInRight;
+}
+
+header{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+
+  position: -webkit-sticky; /* for safari */
+  position: sticky;
+  top: 0;
+  background-color: #1e2025;
+
+  min-height: 4em; /*relative to current font size*/
+  max-height: 4em;
+
+  font-size: xx-large;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header > div{
+  color: azure;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.flex{
+  display: flex;
+
 }
 
 main{
